@@ -4,14 +4,6 @@
         
         # contained images that were used to create the "train" directory, all of the images have now been moved to their respective target folders "train/<target_label>" using "create_dataset.py"
     
-    - pickled_data
-        
-        # this file contains the features pickled for later use
-        - X.pickle
-        
-        # this file contains the targets pickled for later use
-        - y.pickle
-    
     - src
         
         # this file calculates brightness_score of an image using Pillow
@@ -28,8 +20,7 @@
     
     - train
         
-        # dataset the model was trained on
-        - contains target folders containing data
+        - contains folders labelled with target labels
     
     - model.json
         
@@ -42,50 +33,54 @@
 
 ## Required libraries
 
-- keras
-- numpy
-- Pillow
-- opencv
+    - keras
+    - numpy
+    - Pillow
+    - opencv
 
 
 ## Instructions to Run
 
-- navigate to src/
-- run using
+    - navigate to src/
+    - run using
     
         >>> python predict.py
     
         >>> Please enter the filepath for the image to predict brightness: ../test.jpg
     
         >>> Predicted brightness_score : [7]
+        
+
+# Results - After training for 20 epochs
+
+## Training
+    
+    >>> loss: 0.1130 - acc: 0.9724
+
+## Validation
+
+    >>> val_loss: 0.1990 - val_acc: 0.9457
+    
 
 ## Training a custom dataset
 
     - Add all your images to "images/"
+    - Add target folders(folders with target labels) to "train/"
 
 The execution process
 
-- navigate to src/
+    - navigate to src/
 
-1. execute create_dataset.py 
-### this will store the images into respective target folders according to theier brightness scores(0-10) as calculated using calculate_brightness.py
+    1. execute create_dataset.py 
+### this will store the images into respective target folders according to theier brightness scores(0-10) as calculated using "calculate_brightness.py"
 
-2. execute create_training_data.py 
-### this will create the features, target labels and save them to pickle inside /pickled_data
+    2. execute create_training_data.py 
+### this will create the features, target labels and save them to pickle inside "pickled_data/"
 
-3. execute model.py 
+    3. execute model.py 
 ### this will train the model if all of the directory structure is okay
 
-4. execute predict.py as shown above
+    4. execute predict.py as shown above
 
-## Results - After training for 20 epochs
-
-Training
-    
-    >>> loss: 0.1130 - acc: 0.9724
-
-Validation
-
-    >>> val_loss: 0.1990 - val_acc: 0.9457
 
 ## Next task, tweak the model parameters/train longer to achieve higher accuracy
