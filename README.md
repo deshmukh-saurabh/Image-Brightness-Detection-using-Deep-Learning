@@ -35,14 +35,6 @@
         
         # the json file of the used model
     
-    - model_weights.h5
-
-        # saved model weights
-
-    - model.h5
-
-        # the saved model
-    
     - README.md
 
     - test.jpg
@@ -60,19 +52,30 @@
 
 - navigate to src/
 - run using
-    >>> python predict.py
-    >>> Please enter the filepath for the image to predict brightness: ../test.jpg
-    >>> Predicted brightness_score : [7]
+    
+        >>> python predict.py
+    
+        >>> Please enter the filepath for the image to predict brightness: ../test.jpg
+    
+        >>> Predicted brightness_score : [7]
 
-## Training a newer dataset
+## Training a custom dataset
+
+    - Add all your images to "images/"
 
 The execution process
 
 - navigate to src/
 
-1. execute create_dataset.py # this will store the images into respective target folders according to theier brightness scores(0-10) as calculated using calculate_brightness.py
-2. execute create_training_data.py # this will create the features, target labels and save them to pickle inside /pickled_data
-3. execute model.py # this will train the model if all of the directory structure is okay
+1. execute create_dataset.py 
+### this will store the images into respective target folders according to theier brightness scores(0-10) as calculated using calculate_brightness.py
+
+2. execute create_training_data.py 
+### this will create the features, target labels and save them to pickle inside /pickled_data
+
+3. execute model.py 
+### this will train the model if all of the directory structure is okay
+
 4. execute predict.py as shown above
 
 ## Results - After training for 20 epochs
