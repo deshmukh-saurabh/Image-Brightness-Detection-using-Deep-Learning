@@ -1,6 +1,4 @@
 ## Directory structure
-
-SIGNZY-TASK
     
     - images
         
@@ -87,4 +85,4 @@ Validation
 
     >>> val_loss: 0.1990 - val_acc: 0.9457
 
-## Due to time constraints, could not tweak the model parameters to achieve higher accuracy
+## Next task, tweak the model parameters/train longer to achieve higher accuracy
