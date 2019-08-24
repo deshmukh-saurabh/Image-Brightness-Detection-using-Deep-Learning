@@ -1,4 +1,4 @@
-## Directory structure
+# Directory structure
     
     - images
         
@@ -29,7 +29,7 @@
     - README.md
     
 
-## Required libraries
+# Required libraries
 
     - keras
     - numpy
@@ -37,7 +37,7 @@
     - opencv
 
 
-## Instructions to Run
+# Instructions to Run
 
     - navigate to src/
     - run using
@@ -60,7 +60,7 @@
     >>> val_loss: 0.1990 - val_acc: 0.9457
     
 
-## Training a custom dataset
+# Training a custom dataset
 
     - Add all your images to "images/"
     - Add target folders(folders with target labels) to "train/"
@@ -70,7 +70,7 @@ The execution process
     - navigate to src/
 
     1. execute create_dataset.py 
-### this will store the images into respective target folders according to theier brightness scores(0-10) as calculated using "calculate_brightness.py"
+### this will store the images into respective target folders according to their brightness scores(0-10) as calculated using "calculate_brightness.py"
 
     2. execute create_training_data.py 
 ### this will create the features, target labels and save them to pickle inside "pickled_data/"
@@ -81,4 +81,4 @@ The execution process
     4. execute predict.py as shown above
 
 
-## Next task, tweak the model parameters/train longer to achieve higher accuracy
+# Next task, tweak the model parameters/train longer to achieve higher accuracy
