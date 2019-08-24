@@ -3,6 +3,10 @@
     - images
         
         # contained images that were used to create the "train" directory, all of the images have now been moved to their respective target folders "train/<target_label>" using "create_dataset.py"
+        
+    - pickled_data
+        
+        # this folder contains the features and targets pickled for later use
     
     - src
         
