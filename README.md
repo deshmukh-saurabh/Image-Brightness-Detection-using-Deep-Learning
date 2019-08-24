@@ -27,9 +27,7 @@
         # the json file of the used model
     
     - README.md
-
-    - test.jpg
-        # test image in the "instructions to run" below
+    
 
 ## Required libraries
 
